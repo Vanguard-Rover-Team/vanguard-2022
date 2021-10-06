@@ -1,0 +1,32 @@
+@import '~@angular/material/theming';
+
+.mat-elevation-z6 {
+    @include mat-elevation(6);
+}
+
+.navbar {
+    background-color: rgb(46, 46, 197);
+    padding: 10px;
+    color: white;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: rgb(175, 175, 175)
+}
