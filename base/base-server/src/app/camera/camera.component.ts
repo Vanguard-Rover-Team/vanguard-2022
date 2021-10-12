@@ -12,4 +12,14 @@ export class CameraComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  colors = [
+    {id: 1, value: 'Red 1'},
+    {id: 2, value: 'Green 2'},
+    {id: 3, value: 'Blue 3'}
+  ]
+
+  onChange($event: any) {
+    console.log("You did something!")
+  }
+
 }
