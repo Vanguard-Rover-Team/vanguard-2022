@@ -1,0 +1,44 @@
+.mat-card {
+    width: 85%;
+    height: 85%;
+}
+
+.colspan-4 {
+    width: 92.5%;
+    height: 85%;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.button {
+    width: 100%;
+}
+
+.mat-list {
+    width: 100%;
+}
+
+.wrapper {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-gap: 1em;
+}
+
+.h4 {
+    align-items: center;
+    justify-items: center;
+}
+
+.mat-slider {
+    width: 100%;
+}
+
+.reset-button {
+    width: 100%;
+    display: block;
+}

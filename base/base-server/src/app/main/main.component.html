@@ -1,1 +1,95 @@
-<p>main works!</p>
+<mat-grid-list cols = "8" rowHeight = 350px>
+    <mat-grid-tile style = "background-color: royalblue;" colspan = "2">
+        <mat-card>
+            <mat-card-title>Rotation Data</mat-card-title>
+            <mat-card-actions>
+                <mat-slider class="slider" [(ngModel)] = "sliderVal1"></mat-slider>
+                <mat-progress-bar
+                  class = "example-margin"
+                  [color] = "color"
+                  [mode] = "mode"
+                  [value] = "sliderVal1"
+                  [bufferValue] = "sliderVal1">
+                </mat-progress-bar>
+                <p>Pitch: {{sliderVal1}}</p>
+        
+                <mat-slider class="slider" [(ngModel)] = "sliderVal2"></mat-slider>
+                <mat-progress-bar
+                  class = "example-margin"
+                  [color] = "color"
+                  [mode] = "mode"
+                  [value] = "sliderVal2"
+                  [bufferValue] = "sliderVal2">
+                </mat-progress-bar>
+                <p>Roll: {{sliderVal2}}</p>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile style = "background-color: royalblue;"  colspan = "2">
+        <mat-card>
+            <mat-card-title>Driving Controls</mat-card-title>
+            <mat-card-actions>
+                <p>Speed: {{sliderVal3}}</p>
+                <mat-slider class="slider" [(ngModel)] = "sliderVal3"></mat-slider>
+        
+                <mat-divider></mat-divider>
+                <p>Turning: {{sliderVal4}}</p>
+                <mat-slider class="slider" [(ngModel)] = "sliderVal4"></mat-slider>
+        
+                <mat-divider></mat-divider>
+                <p>Configuration Mode: 0</p>
+                <button mat-button [matMenuTriggerFor]="menu">Default Driving</button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>1</button>
+                    <button mat-menu-item>2</button>
+                </mat-menu>
+        
+                <div class = "reset-button">
+                    <button mat-button color="primary" (click) = "resetControls()">Reset Controls</button>
+                </div>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile style = "background-color: royalblue;" colspan = "4">
+        <mat-card class = "colspan-4">
+            <mat-card-title>Waypoints</mat-card-title>
+            <mat-card-actions>
+                <mat-grid-list cols = "3" rowHeight = "85px">
+                    <mat-grid-tile>
+                        <mat-form-field class="example-form-field" appearance="fill">
+                            <mat-label>Latitude</mat-label>
+                            <input matInput type="text" [(ngModel)]="latValue">
+                            <button *ngIf="latValue" matSuffix mat-icon-button aria-label="Clear" (click)="latValue=''">
+                              <mat-icon>close</mat-icon>
+                            </button>
+                        </mat-form-field>     
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <mat-form-field class="example-form-field" appearance="fill">
+                            <mat-label>Longitude</mat-label>
+                            <input matInput type="text" [(ngModel)]="lonValue">
+                            <button *ngIf="lonValue" matSuffix mat-icon-button aria-label="Clear" (click)="lonValue=''">
+                              <mat-icon>close</mat-icon>
+                            </button>
+                        </mat-form-field>                          
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <button mat-button color="primary">Add Waypoint</button>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <mat-list>
+                            <div mat-subheader>Waypoints</div>
+                            <mat-list-item>
+                                <mat-icon mat-list-icon>place</mat-icon>
+                                <div mat-line>Waypoint 1</div>
+                                <div mat-line>{{latValue}}, {{lonValue}}</div>
+                            </mat-list-item>
+                        </mat-list>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

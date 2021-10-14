@@ -1,24 +1,32 @@
-.camera-selection {
-    margin: 15px;
-}
-
-.menu-items {
+.wrapper {
     display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-.mat-checkbox {
-    margin: 15px;
+.wrapper > div {
+    background: #eee;
+    padding: 1em;
 }
 
-.mat-radio-group {
-    margin: 15px;
-}
-
-.mat-slide-toggle {
-    margin: 25px;
-    padding: 25px;
+.select {
+    grid-column: 2 / 5;
 }
 
 .mat-slider {
     width: 300px;
+}
+
+.camera-wrapper {
+    grid-column: 2 / 4;
+}
+
+.nester-wrapper {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 2 / 5;
+
+    padding: 1em;
 }

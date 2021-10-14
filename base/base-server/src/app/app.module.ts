@@ -13,6 +13,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressBarModule } from '@angular/material/progress-bar'; 
+import { MatDividerModule } from '@angular/material/divider';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 
 //Video Player
 import { VgCoreModule } from '@videogular/ngx-videogular/core';
@@ -32,6 +36,8 @@ import { AutoComponent } from './auto/auto.component';
 import { MainComponent } from './main/main.component';
 import { BaseFormComponent } from './base-form/base-form.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -61,6 +67,12 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
     MatButtonModule,
     MatButtonToggleModule,
     MatSliderModule,
+    MatProgressBarModule,
+    MatDividerModule,
+    MatGridListModule,
+    MatCardModule,
+    MatInputModule,
+    MatListModule,
 
     VgCoreModule,
     VgControlsModule,

@@ -1,24 +1,36 @@
-<div class = "camera-selection">
-    <button mat-button [matMenuTriggerFor]="menu">Select a Camera</button>
-    <mat-menu #menu="matMenu">
-        <button mat-menu-item>Camera 1</button>
-        <button mat-menu-item>Camera 2</button>
-    </mat-menu>
-</div>
+<div class="wrapper">
+    <div clas = "camera-wrapper">
+        <app-video-player></app-video-player>
+    </div>
 
-<div class = "menu-items">
-    <mat-checkbox (change) = "onChange($event)">Subscribe</mat-checkbox>
-
-    <mat-radio-group>
-        <mat-radio-button value = "1" (change) = "onChange($event)">Radio Button 1</mat-radio-button>
-        <mat-radio-button value = "0" (change) = "onChange($event)">Radio Button 2</mat-radio-button>
-    </mat-radio-group>
+    <div class = "select">
+        <mat-slider min="1" max="100" step="1" value="50" thumbLabel tickInterval="1">Slider</mat-slider>
+    </div>
     
-    <mat-slide-toggle></mat-slide-toggle>
-    
-    <mat-slider min="1" max="100" step="1" value="50" thumbLabel tickInterval="1">Slider</mat-slider>
-</div>
+    <div class = "nested-wrapper">
+        <div class = "checkbox">
+            <mat-checkbox (change) = "onChange($event)">Subscribe</mat-checkbox>
+        </div>
 
-<div class = "video-player">
-    <app-video-player></app-video-player>
+        <div class="radio-buttons">
+            <mat-radio-group>
+                <mat-radio-button value = "1" (change) = "onChange($event)">Radio Button 1</mat-radio-button>
+                <mat-radio-button value = "0" (change) = "onChange($event)">Radio Button 2</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+        <div class="slide-toggle">
+            <mat-slide-toggle></mat-slide-toggle>
+        </div>
+
+        <div class="slider">
+            <mat-slider min="1" max="100" step="1" value="50" thumbLabel tickInterval="1">Slider</mat-slider>
+        </div>
+
+        <button mat-button [matMenuTriggerFor]="menu">Select a Camera</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Camera 1</button>
+            <button mat-menu-item>Camera 2</button>
+        </mat-menu>
+    </div>
 </div>
