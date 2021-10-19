@@ -31,5 +31,11 @@
 *.out
 *.app
 
+# ProtoBuf Generated Source files
+*.pb.h
+*.pb.cc
+
 # Directories
 .vscode/
+.build/
+.deps/

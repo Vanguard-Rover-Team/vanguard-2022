@@ -1,7 +1,32 @@
 #!/bin/bash
-# This script installs nvm, NodeJS, npm, and Angular CLI
+# This script installs ZeroMQ, Google Protocol Buffers, nvm, NodeJS, npm, and Angular CLI
 
+echo ""
+echo ""
+echo ""
+echo "**************************************************"
+echo "Updating apt package information..."
+echo "**************************************************"
+echo ""
 sudo apt update
+
+echo ""
+echo ""
+echo ""
+echo "**************************************************"
+echo "Installing ZeroMQ..."
+echo "**************************************************"
+echo ""
+sudo apt install libzmq3-dev
+
+echo ""
+echo ""
+echo ""
+echo "**************************************************"
+echo "Installing Google Protocol Buffers..."
+echo "**************************************************"
+echo ""
+sudo apt install protobuf-compiler
 
 echo ""
 echo ""
@@ -17,9 +42,9 @@ echo ""
 echo ""
 echo "**************************************************"
 echo "Installing NodeJS..."
-sudo apt install nodejs
 echo "**************************************************"
 echo ""
+sudo apt install nodejs
 
 echo ""
 echo ""
@@ -45,7 +70,7 @@ echo ""
 echo ""
 echo ""
 echo "**************************************************"
-echo "Installing angular..."
+echo "Installing Angular..."
 echo "**************************************************"
 echo ""
 sudo npm install -g @angular/cli
