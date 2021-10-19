@@ -2,7 +2,7 @@
     <mat-grid-tile style = "background-color: royalblue;" colspan = "2">
         <mat-card>
             <mat-card-title>Rotation Data</mat-card-title>
-            <mat-card-actions>
+            <mat-card-content>
                 <mat-slider class="slider" [(ngModel)] = "sliderVal1"></mat-slider>
                 <mat-progress-bar
                   class = "example-margin"
@@ -22,14 +22,14 @@
                   [bufferValue] = "sliderVal2">
                 </mat-progress-bar>
                 <p>Roll: {{sliderVal2}}</p>
-            </mat-card-actions>
+            </mat-card-content>
         </mat-card>
     </mat-grid-tile>
 
     <mat-grid-tile style = "background-color: royalblue;"  colspan = "2">
         <mat-card>
             <mat-card-title>Driving Controls</mat-card-title>
-            <mat-card-actions>
+            <mat-card-content>
                 <p>Speed: {{sliderVal3}}</p>
                 <mat-slider class="slider" [(ngModel)] = "sliderVal3"></mat-slider>
         
@@ -48,20 +48,20 @@
                 <div class = "reset-button">
                     <button mat-button color="primary" (click) = "resetControls()">Reset Controls</button>
                 </div>
-            </mat-card-actions>
+            </mat-card-content>
         </mat-card>
     </mat-grid-tile>
 
     <mat-grid-tile style = "background-color: royalblue;" colspan = "4">
         <mat-card class = "colspan-4">
             <mat-card-title>Waypoints</mat-card-title>
-            <mat-card-actions>
-                <mat-grid-list cols = "3" rowHeight = "85px">
+            <mat-card-content>
+                <mat-grid-list cols = "3">
                     <mat-grid-tile>
                         <mat-form-field class="example-form-field" appearance="fill">
                             <mat-label>Latitude</mat-label>
                             <input matInput type="text" [(ngModel)]="latValue">
-                            <button *ngIf="latValue" matSuffix mat-icon-button aria-label="Clear" (click)="latValue=''">
+                            <button *ngIf="latValue" matSuffix mat-icon-button aria-label="Clear" (click)="latValue=0">
                               <mat-icon>close</mat-icon>
                             </button>
                         </mat-form-field>     
@@ -70,26 +70,26 @@
                         <mat-form-field class="example-form-field" appearance="fill">
                             <mat-label>Longitude</mat-label>
                             <input matInput type="text" [(ngModel)]="lonValue">
-                            <button *ngIf="lonValue" matSuffix mat-icon-button aria-label="Clear" (click)="lonValue=''">
+                            <button *ngIf="lonValue" matSuffix mat-icon-button aria-label="Clear" (click)="lonValue=0">
                               <mat-icon>close</mat-icon>
                             </button>
                         </mat-form-field>                          
                     </mat-grid-tile>
                     <mat-grid-tile>
-                        <button mat-button color="primary">Add Waypoint</button>
+                        <button mat-button color="primary" (click)="addWaypoint()">Add Waypoint</button>
                     </mat-grid-tile>
-                    <mat-grid-tile>
+                    <mat-grid-tile colspan = "3">
                         <mat-list>
                             <div mat-subheader>Waypoints</div>
-                            <mat-list-item>
+                            <mat-list-item *ngFor="let waypoint of waypoints">
                                 <mat-icon mat-list-icon>place</mat-icon>
                                 <div mat-line>Waypoint 1</div>
-                                <div mat-line>{{latValue}}, {{lonValue}}</div>
+                                <div mat-line>{{waypoint.lat}}, {{waypoint.lon}}</div>
                             </mat-list-item>
                         </mat-list>
                     </mat-grid-tile>
                 </mat-grid-list>
-            </mat-card-actions>
+            </mat-card-content>
         </mat-card>
     </mat-grid-tile>
 </mat-grid-list>

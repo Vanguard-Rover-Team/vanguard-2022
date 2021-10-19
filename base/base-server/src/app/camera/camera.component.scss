@@ -1,32 +1,4 @@
-.wrapper {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-}
-
-.wrapper > div {
-    background: #eee;
-    padding: 1em;
-}
-
-.select {
-    grid-column: 2 / 5;
-}
-
-.mat-slider {
-    width: 300px;
-}
-
-.camera-wrapper {
-    grid-column: 2 / 4;
-}
-
-.nester-wrapper {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column: 2 / 5;
-
-    padding: 1em;
+.mat-card {
+    width: 92.5%;
+    height: 85%;
 }

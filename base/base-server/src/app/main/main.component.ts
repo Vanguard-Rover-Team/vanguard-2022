@@ -17,14 +17,20 @@ export class MainComponent implements OnInit {
   sliderVal3 = 50;
   sliderVal4 = 50;
 
-  latValue = '38.267730';
-  lonValue = '-110.720120';
+  latValue = 38.267730;
+  lonValue = -110.720120;
 
   constructor() { }
 
   resetControls() {
     this.sliderVal3 = 50;
     this.sliderVal4 = 50;
+  }
+
+  waypoints: {lat: number, lon: number}[] = [];
+
+  addWaypoint() {
+    this.waypoints.push({lat: this.latValue, lon: this.lonValue});
   }
 
   ngOnInit(): void {
