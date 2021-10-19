@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package vanguard;
+
+message StandardMessage {
+  uint32 dest = 1;
+  oneof message {
+    CommMessage comm = 2;
+    CanMessage can = 3;
+    ArmMessage arm = 4;
+    OdrvMessage odrv = 5;
+    CamMessage cam = 6;
+    AutoMessage auto = 7;
+  }
+}
+
+
+message CommMessage {
+
+}
+
+message CanMessage {
+  string hello = 1;
+  repeated uint32 data = 2;
+}
+
+message ArmMessage {
+
+}
+
+message OdrvMessage {
+
+}
+
+message CamMessage {
+
+}
+
+message AutoMessage {
+
+}
