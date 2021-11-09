@@ -17,8 +17,8 @@ export class MainComponent implements OnInit {
   sliderVal3 = 50;
   sliderVal4 = 50;
 
-  latValue = 38.267730;
-  lonValue = -110.720120;
+  public latValue = 38.267730;
+  public lonValue = -110.720120;
 
   constructor() { }
 

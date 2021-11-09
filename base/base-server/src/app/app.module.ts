@@ -24,6 +24,9 @@ import { VgControlsModule } from '@videogular/ngx-videogular/controls';
 import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
 import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
 
+//Leaflet
+
+
 import { UiSwitchModule } from 'ngx-ui-switch';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,6 +41,7 @@ import { BaseFormComponent } from './base-form/base-form.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +54,8 @@ import { MatListModule } from '@angular/material/list';
     AutoComponent,
     MainComponent,
     BaseFormComponent,
-    VideoPlayerComponent
+    VideoPlayerComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
