@@ -13,7 +13,7 @@ static zmq::context_t ctx;
 auto recv_B = []()
 {
     zmq::socket_t sock(ctx, zmq::socket_type::sub);
-    sock.set(zmq::sockopt::routing_id, "Dealer2");
+    sock.set(zmq::sockopt::routing_id, "Sub1");
     //sock.set(zmq::sockopt::subscribe, "Router");
     sock.connect("tcp://localhost:5556");
     std::cout << "Connected to Socket" << std::endl;
