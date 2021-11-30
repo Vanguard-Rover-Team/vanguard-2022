@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
+import { MainComponent } from '../main/main.component';
 
 @Component({
   selector: 'app-map',
@@ -22,6 +23,8 @@ export class MapComponent implements OnInit {
       minZoom: 10,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
+
+    //L.marker()
 
     // create 5 random jitteries and add them to map
     const jittery = Array(5).fill(this.centroid).map( 

@@ -7,9 +7,10 @@ import { MainComponent } from './main/main.component';
 import { TunerComponent } from './tuner/tuner.component';
 
 const routes: Routes = [
-  { path: 'main', component: MainComponent},
+  {path:'', redirectTo:'main', pathMatch: 'full' },
+  { path: 'main', component: MainComponent },
   { path: 'camera', component: CameraComponent },
-  { path: 'tuner', component: TunerComponent },
+  { path: 'tuner', component: TunerComponent }, 
   { path: 'arm', component: ArmComponent },
   { path: 'auto', component: AutoComponent },
 ];
