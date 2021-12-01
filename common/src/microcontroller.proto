@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package common.microcontroller;
+
+message Message {
+  oneof message {
+    ArmPositionControlMessage arm_position_control_message = 1;
+    ArmOffMessage arm_off_message = 2;
+  }
+}
+
+message ArmPositionControlMessage {
+  // Units in 0.01 degrees
+  sint32 shoulderYawControl = 1;
+  sint32 shoulderPitchControl = 2;
+  sint32 elbowAngleControl = 3;
+  sint32 wristPitchControl = 4;
+
+  // Units in degrees per second
+  uint32 shoulderYawSpeedLimit = 5;
+  uint32 shoulderPitchSpeedLimit = 6;
+  uint32 elbowAngleSpeedLimit = 7;
+  uint32 wristPitchSpeedLimit = 8;
+}
+
+message ArmOffMessage {}

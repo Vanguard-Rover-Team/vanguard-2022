@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package common.arm_kinematics;
+
+message Message {
+  oneof message {
+    BeginMessage begin_message = 1;
+  }
+}
+
+message BeginMessage {}
+
+message ArmPositionStatusMessage {
+  // 14-bit encoder value range [0, 16383]
+  uint32 shoulderYawStatus = 1;
+  uint32 shoulderPitchStatus = 2;
+  uint32 elbowAngleStatus = 3;
+  uint32 wristPitchStatus = 4;
+}

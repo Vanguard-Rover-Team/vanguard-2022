@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package common.slam;
+
+message Message {
+  oneof message {
+    BeginMessage begin_message = 1;
+  }
+}
+
+message BeginMessage {
+  uint32 test = 1;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package common.base_station;
+
+message Message {
+  oneof message {
+    BeginMessage begin_message = 1;
+  }
+}
+
+message BeginMessage {}

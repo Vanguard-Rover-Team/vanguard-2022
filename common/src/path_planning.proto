@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package common.path_planning;
+
+message Message {
+  oneof message {
+    BeginMessage begin_message = 1;
+  }
+}
+
+message BeginMessage {
+  uint32 test = 1;
+}

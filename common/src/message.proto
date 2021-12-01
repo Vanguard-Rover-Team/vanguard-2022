@@ -1,41 +1,19 @@
 syntax = "proto3";
 
-package vanguard;
+import "base_station.proto";
+import "microcontroller.proto";
+import "arm_kinematics.proto";
+import "slam.proto";
+import "path_planning.proto";
 
-message StandardMessage {
-  uint32 dest = 1;
+package common;
+
+message Message {
   oneof message {
-    CommMessage comm = 2;
-    CanMessage can = 3;
-    ArmMessage arm = 4;
-    OdrvMessage odrv = 5;
-    CamMessage cam = 6;
-    AutoMessage auto = 7;
+    base_station.Message base_station_message = 1;
+    microcontroller.Message microcontroller_message = 2;
+    arm_kinematics.Message arm_kinematics_message = 3;
+    slam.Message slam_message = 4;
+    path_planning.Message path_planning_message = 5;
   }
-}
-
-
-message CommMessage {
-
-}
-
-message CanMessage {
-  string hello = 1;
-  repeated uint32 data = 2;
-}
-
-message ArmMessage {
-
-}
-
-message OdrvMessage {
-
-}
-
-message CamMessage {
-
-}
-
-message AutoMessage {
-
 }
