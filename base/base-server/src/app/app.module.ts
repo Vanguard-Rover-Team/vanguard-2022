@@ -24,6 +24,9 @@ import { VgControlsModule } from '@videogular/ngx-videogular/controls';
 import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
 import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
 
+//Webcam
+import { WebcamModule } from 'ngx-webcam';
+
 //Leaflet
 
 
@@ -39,6 +42,7 @@ import { AutoComponent } from './auto/auto.component';
 import { MainComponent } from './main/main.component';
 import { BaseFormComponent } from './base-form/base-form.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
+import { VideoPlayerNewComponent } from './video-player-new/video-player-new.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MapComponent } from './map/map.component';
@@ -55,6 +59,7 @@ import { MapComponent } from './map/map.component';
     MainComponent,
     BaseFormComponent,
     VideoPlayerComponent,
+    VideoPlayerNewComponent,
     MapComponent
   ],
   imports: [
@@ -83,6 +88,8 @@ import { MapComponent } from './map/map.component';
     VgControlsModule,
     VgOverlayPlayModule,
     VgBufferingModule,
+
+    WebcamModule,
 
     UiSwitchModule,
     MatIconModule

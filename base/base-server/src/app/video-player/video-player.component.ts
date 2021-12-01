@@ -19,7 +19,7 @@ export class VideoPlayerComponent implements OnInit {
 
   setUpCamera() {
     navigator.mediaDevices.getUserMedia({
-      video: {width: 500, height: 280},
+      video: {width: 800, height: 480},
       audio: false
     }).then(stram => {
       console.log(stram);
